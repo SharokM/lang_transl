@@ -4,14 +4,14 @@ translations = {
 
 }
 
-with open("translations.csv", "r") as words:
+with open("english_german_filipino_200.csv", "r") as words:
     reader = csv.DictReader(words, delimiter=",")
     for line in reader:
         english = line["English"].lower()
-        spanish = line["Spanish"].lower()
-        french = line["French"].lower()
-        translations[english] = [spanish, french]
-        print(line["English"], line["French"], line["Spanish"])
+        german = line["German"].lower()
+        filipino = line["Filipino"].lower()
+        translations[english] = [german, filipino]
+        print(line["English"], line["German"], line["Filipino"])
 
 
 done = False
