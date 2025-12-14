@@ -1,5 +1,10 @@
 import csv
 
+def intro():
+    print("Welcome to the English-German-Filipino Translator! \n\nEnter a word then press 'Enter'.\n")
+    print('Type "exit" at any time to exit')
+
+
 translations = {
 
 }
@@ -16,15 +21,21 @@ with open("english_german_filipino_200.csv", "r") as words:
 
 done = False
 
-print('Type "exit" at any time to exit')
+
+intro()
+
+def exit():
+    print("\nThank you for using the translator. Goodbye!")
 
 while not done:
-    word = input("Enter a word to translate (hello, thank you, sorry): ").strip().lower()
+    word = input("Enter a word to translate \n(E.g. hello, thank you, sorry): ").strip().lower()
     if word == "exit":
+        exit()
         done = True
     elif word in translations:
-        print(f'The translation of "{word}" is "{translations[word]}"')
+        print(f'\nThe translation of "{word}" in German is: \n"{translations[word] [0]}"')
+        print(f'\nThe translation of "{word}" in Filipino is: \n"{translations[word] [1]}"')
     else:
-        print(f'"{word}" is not currently in our dictionary, thank you for your patience while we update our vocabulary database.')
+        print(f'\n"{word}" is not currently in our dictionary, thank you for your patience while we update our vocabulary database.')
 
 
