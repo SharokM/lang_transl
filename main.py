@@ -1,12 +1,11 @@
 import csv
 
 def intro():
-    print("Welcome to the English-German-Filipino Translator! \n\nEnter a word then press 'Enter'.\n")
-    print('Type "exit" at any time to exit')
+    print("Welcome to the English-German-Filipino Translator! \n\nEnter a word then press 'Enter'.")
+    print('\nType "exit" at any time to exit')
 
 
 translations = {
-
 }
 
 with open("english_german_filipino_200.csv", "r") as words:
